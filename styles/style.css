@@ -113,8 +113,8 @@ main{
 }
 .card-container{
     display: flex;
-    justify-content: space-around;
-    padding-top: 40px;
+    justify-content: space-evenly;
+    padding: 40px 100px 0px 50px;
 }
 .card-container .card {
     border-radius: 8px;
@@ -127,6 +127,7 @@ main{
     font-weight: 600;
     font-size: 1.2rem;
     margin-top: 5px;
+    color: #727272;
 
 }
 .card-container .card-stat {
@@ -135,6 +136,26 @@ main{
     margin-top: 10px;
     margin-bottom: 10px;
 
+}
+/* sponsors styles */
+.sponsors{
+    text-align: center;
+}
+.sponsor-title{
+    padding-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #131313;
+}
+.sponsors-img-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    align-items: center;
+}
+.sponsors-img-container img{
+    width: 165px;
 }
 
 /* responsive styles */
@@ -145,19 +166,33 @@ main{
     }
     nav,
     .team-container,
-    .card-container
+    .card-container,
+    .sponsors-img-container
     {
         flex-direction: column;
     }
+    .sponsors-img-container img{
+        width: 165px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 30px;
+    }
     .teams-tmg{
         grid-template-columns: 1fr;
+    }
+    .facts, .team-container{
+        padding-left: 0px;
+    }
+    .facts, .features{
+        text-align: center;
     }
 }
 @media screen and (min-width: 576px) and (max-width:960px) {
     header{
         padding: 50px;
     }
-    nav, .team-container{
+    nav, .team-container, .sponsors-img-container{
         flex-direction: column;
     }
     .team-content, .card-container{
@@ -166,5 +201,12 @@ main{
     }
     .card-container{
         gap: 20px;
+    }
+    
+    .facts, .team-container{
+        padding-left: 0px;
+    }
+    .facts, .features{
+        text-align: center;
     }
 }
